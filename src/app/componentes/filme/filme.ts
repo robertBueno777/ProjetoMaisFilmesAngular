@@ -14,5 +14,4 @@ export class Filme {
   alternarFavorito(){
     this.filme().favorito = !this.filme().favorito;
   }
-  
 }
