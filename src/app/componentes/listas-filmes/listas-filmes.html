@@ -1,8 +1,11 @@
 <section>
     <h2 class="texto-titulo">
-        Minhas Leituras
+        Meus filmes
     </h2>
     <span class="linha-destaque linha-destaque--grande" >
         
     </span>
 </section>
+@for(genero of generos; track genero){
+    <app-genero-filme [genero]="genero"></app-genero-filme>
+}

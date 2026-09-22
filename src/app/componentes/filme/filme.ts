@@ -1,8 +1,10 @@
 import { Component, input } from '@angular/core';
 import { IFilme } from './filmeInterface'
+import { CommonModule } from '@angular/common';
+
 
 @Component({
-  imports: [],
+  imports: [CommonModule],
   selector: 'app-filme',
   styleUrl: './filme.css',
   templateUrl: './filme.html',

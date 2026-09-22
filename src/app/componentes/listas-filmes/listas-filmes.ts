@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 //import { GeneroFilme } from '../genero-filme/genero-filme';
-import { IFilme, GeneroFilme } from '../filme/filmeInterface';
+import { IFilme, GeneroFilmeInterface } from '../filme/filmeInterface';
 import { map } from 'rxjs';
 import { filmes } from '../../mock-filmes';
+import { GeneroFilme } from '../genero-filme/genero-filme';
 
 @Component({
-  imports: [],
+  imports: [GeneroFilme],
   selector: 'app-listas-filmes',
   styleUrl: './listas-filmes.css',
   templateUrl: './listas-filmes.html',
 })
 export class ListasFilmes implements OnInit {
-  generos: GeneroFilme[] = [];//ta fazendo um array de um genero de filme 
+  generos: GeneroFilmeInterface[] = [];//ta fazendo um array de um genero de filme 
   filmesPorGeneros: Map<string, IFilme[]> = new Map();
 
   ngOnInit(){
@@ -55,7 +56,6 @@ export class ListasFilmes implements OnInit {
 
 
     ]
-    console.log(this.filmesPorGeneros)
   }
 
 }

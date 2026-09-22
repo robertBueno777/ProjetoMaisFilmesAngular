@@ -5,12 +5,12 @@ export interface IFilme {
     titulo: string;
     autoria: string;
     favorito: boolean;
-    genero: GeneroFilme;
+    genero: GeneroFilmeInterface;
     imagem: string;
 }
 
-export interface GeneroFilme{
+export interface GeneroFilmeInterface{
     id: string;
     value: string;
-    filmes: Filme[]
+    filmes: IFilme[]
 }

@@ -1,2 +1,17 @@
-<app-filme [filme]="filme">
-</app-filme>
+<section class="generos" [class]="genero().id">
+    <h3 class="texto-h3-prata">
+        {{ genero().value }}
+    </h3>
+    <span class="linha-destaqua linha-destaque--pequena" [class]="genero().id"></span>
+@if(genero().filmes.length === 0){
+    <div class="texto-sem-livros">
+        <img src="sem-livros.png" alt="sem filmes neste genero">
+        <p>Não há filmes neste gênero ainda.</p>
+    </div>
+}
+<div class="filmes-genero">
+    @for(filme of genero().filmes; track filme){
+        <app-filme [filme]="filme"></app-filme>
+    }
+</div>
+</section>

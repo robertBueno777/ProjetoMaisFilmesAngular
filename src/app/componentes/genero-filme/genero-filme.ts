@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Filme } from '../filme/filme';
-import { filmes } from '../../mock-filmes';
+import { GeneroFilmeInterface } from '../filme/filmeInterface';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
-  imports: [Filme],
+  imports: [Filme, CommonModule],
   selector: 'app-genero-filme',
   styleUrl: './genero-filme.css',
   templateUrl: './genero-filme.html',
 })
 export class GeneroFilme {
-  filme = filmes[0]
+  genero = input.required<GeneroFilmeInterface>();
+  
 }

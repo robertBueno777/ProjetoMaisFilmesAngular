@@ -1,3 +1,17 @@
 .banner img{
     width: 100%;
 }
+.logoMaisFilmes {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 800px;
+    width: 700px !important;
+    height: auto;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.logoMaisFilmes:hover {
+    transform: translate(-50%, -50%) scale(1.1);    
+}
